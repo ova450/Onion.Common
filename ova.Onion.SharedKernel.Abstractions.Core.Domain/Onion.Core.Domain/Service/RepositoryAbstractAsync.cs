@@ -1,9 +1,8 @@
 ﻿
-
-using Cobra.Core.SharedKernel.Abstractions.Domain.Model;
 using Microsoft.EntityFrameworkCore;
+using ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Model;
 
-namespace Cobra.Core.SharedKernel.Abstractions.Domain.Service
+namespace ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Service
 {
     /// <summary>
     /// Универсальный абстрактный класс репозитория, реализующий асинхронные основные операции CRUD путем имплементации универсального интерфейса IRepositoryAsync<T>.
@@ -12,7 +11,7 @@ namespace Cobra.Core.SharedKernel.Abstractions.Domain.Service
     /// </summary>
     /// <typeparam name="T">Универсальный тип объектов в репозитории.</typeparam>
     /// <param name="context">Контекст репозитория</param>
-    public abstract class RepositoryAbstractAsync<T,TId>(DbContext context): RepositoryAbstract<T,TId>(context), IRepositoryAsync<T,TId> 
+    public abstract class RepositoryAbstractAsync<T, TId>(DbContext context): RepositoryAbstract<T, TId>(context), IRepositoryAsync<T, TId>
         where T : class, IEntityBase<TId>
         where TId : struct
     {

@@ -1,7 +1,7 @@
 ﻿
-using ova.Onion.SharedKernel.Abstractions.Core.Domain.Model;
+using ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Model;
 
-namespace ova.Onion.SharedKernel.Abstractions.Core.Domain.Service;
+namespace ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Service;
 
 /// <summary>Универсальный интерфейс репозитория, предоставляющего базовые методы основных операции CRUD.</summary>
 /// <typeparam name="T">Универсальный тип объектов репозитория.</typeparam>

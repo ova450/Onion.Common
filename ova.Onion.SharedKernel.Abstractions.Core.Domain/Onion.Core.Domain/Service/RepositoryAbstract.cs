@@ -1,11 +1,8 @@
 ﻿
-
-
-using Cobra.Core.SharedKernel.Abstractions.Domain.Model;
-
 using Microsoft.EntityFrameworkCore;
+using ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Model;
 
-namespace Cobra.Core.SharedKernel.Abstractions.Domain.Service
+namespace ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Service
 {
     /// <summary>
     /// Абстрактный класс репозитория, реализующий универсальный интерфейс IRepository.
@@ -13,8 +10,8 @@ namespace Cobra.Core.SharedKernel.Abstractions.Domain.Service
     /// </summary>
     /// <typeparam name="T">Универсальный тип объекта в репозитории.</typeparam>
     /// <param name="context"></param>
-    public abstract class RepositoryAbstract<T, TId>(DbContext context): IRepository<T,TId> 
-        where T : class, IEntityBase<TId> 
+    public abstract class RepositoryAbstract<T, TId>(DbContext context): IRepository<T, TId>
+        where T : class, IEntityBase<TId>
         where TId : struct
     {
         protected DbContext _dbContext = context;
