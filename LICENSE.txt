@@ -1,6 +1,22 @@
-MIT License
+# OVASOFT ONION CORE ABSTRACTIONS COMMON for NET 9.0
 
-Copyright (c) [year] [fullname]
+## Условия распространения и использования программного обеспечения
+
+#### *Copyrights & Trademarks*
+
+ovaataaridotru (copyright)
+
+OVASOFT (trademark)
+
+OVASOFT ONION CORE ABSTRACTIONS COMMON (trademark)
+
+OVASOFT ABSTRACTIONS (trademark)
+
+#### *Лицензии и отказ от ответственности*
+
+###### MIT License 9.0
+
+Copyright (c) [2024] [ovaataaridotru]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -14,8 +30,26 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#### *Общие условия, исключения из условий и применение условий*
+
+Общие условиями распространеия и использования программного обеспечения в целом, включая все его компоненты и модули, за исключением случаев, когда для конкретных частей программного обеспечения указано иное, определяются условиями MIT License 9.0 Copyright (c) [2024] [ovaataaridotru] и рапространяются на программное обеспечение и/или его компоненты в наименование которых включена одна или более торговых марок перечисленных в разделе "Copyrights & Trademarks" настоящего документа, а также дополнительные суффиксы:
+
+- без дополнительных суффиксов;
+
+- суффикс "OpenSource";
+
+- несколько суффиксов, в число которых входит "OpenSource";
+
+###### Исключения для версий с дополнительными суффиксами
+
+Условия лицензии не распространяются на части программного обеспечения, помеченные суффиксами, такими как "Free", "Trial", "RC", "Beta", "PRO", "PRO+", "PRO++", "Advanced" и аналогичными, если в сотав суффиксов не входит "OpenSource". Для этих версий могут действовать отдельные условия, которые будут указаны в соответствующей документации.
+
+###### Изменение условий
+
+Мы оставляем за собой право вносить изменения в условия лицензии. Все изменения будут опубликованы на сайте GitHub в соотвествующем разделе. Пользователи обязаны регулярно проверять обновления условий.
+
+###### Применение условий
+
+Используя программное обеспечение, вы подтверждаете свое согласие с настоящими условиями. Если вы не согласны с ними, вы не имеете права на использование программного обеспечения.

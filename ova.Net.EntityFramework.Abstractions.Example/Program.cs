@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using Microsoft.EntityFrameworkCore;
 
-using ova.Net.EntityFramework.Abstractions.RepositoryPattern.Onion.Core.Domain.Model;
+using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
 
 using ApplicationDbContext db = new ApplicationDbContext();
 
@@ -51,22 +51,39 @@ public class Foo: IEntity<int>
     //public ICollection<Bar> Bars { get; set; } = new List<Bar>(); // Инициализация коллекции
 }
 
-public class Bar: IEntity<int>
+public class Bar: IEntity<int>, IParent<int, Foo>
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Автоинкремент
     public int Id { get; set; }
+
     public string Name { get; set; }
 
+    int IParent<int, Foo>.ParentId { get; set; }
+    Foo IParent<int, Foo>.Parent { get; set; }
+
+    //// Реализация интерфейса IParent
+    //int IParent<int, Foo>.ParentId { get; set; }
+    //IEntityBase<int> IParent<int, Foo>.Parent { get; set; }
+
     // Внешний ключ для связи с Foo
-    public int FooId { get; set; }
-    public Foo Foo { get; set; }
+    public int FooId
+    {
+        get => ((IParent<int, Foo>) this).ParentId;
+        set => ((IParent<int, Foo>) this).ParentId = value;
+    }
+
+    public Foo Foo
+    {
+        get => (Foo) ((IParent<int, Foo>) this).Parent;
+        set => ((IParent<int, Foo>) this).Parent = value;
+    }
 }
 
 public class ApplicationDbContext: DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Initial Catalog=dbCobra1; Integrated Security=True");
+        => optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Initial Catalog=dbCobra3; Integrated Security=True");
 
     public DbSet<Foo> Foos { get; set; }
     public DbSet<Bar> Bars { get; set; }
