@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using Microsoft.EntityFrameworkCore;
 
-using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
-using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainService;
+using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+using OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
 using ApplicationDbContext db = new ApplicationDbContext();
 

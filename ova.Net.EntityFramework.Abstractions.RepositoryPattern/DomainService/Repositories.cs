@@ -1,7 +1,6 @@
-﻿
-using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
+﻿using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
 
-namespace OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainService;
+namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
 /// <summary>Универсальный интерфейс репозитория, предоставляющего базовые методы основных операции CRUD.</summary>
 /// <typeparam name="T">Универсальный тип объектов репозитория.</typeparam>

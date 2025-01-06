@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
 
-namespace OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainService;
+namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
 /// <summary>
 /// An abstract repository class that implements the IRepository universal interface. 

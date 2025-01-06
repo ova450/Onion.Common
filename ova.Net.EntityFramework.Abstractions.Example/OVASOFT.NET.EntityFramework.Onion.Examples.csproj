@@ -5,6 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>$(MSBuildProjectName.Replace("EntityFramework", "EF"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ova.Net.EntityFramework.Abstractions.RepositoryPattern\OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.csproj" />
+    <ProjectReference Include="..\ova.Net.EntityFramework.Abstractions.RepositoryPattern\OVASOFT.NET.EntityFramework.Onion.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

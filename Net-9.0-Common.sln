@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35605.110
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions", "ova.Net.EntityFramework.Abstractions.RepositoryPattern\OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.csproj", "{D6FF1705-927D-BCB2-C2C0-F434E43A7455}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVASOFT.NET.EntityFramework.Onion.Abstractions", "ova.Net.EntityFramework.Abstractions.RepositoryPattern\OVASOFT.NET.EntityFramework.Onion.Abstractions.csproj", "{D6FF1705-927D-BCB2-C2C0-F434E43A7455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVASOFT.NET.EntityFramework.RepositoryPattern.Examples", "ova.Net.EntityFramework.Abstractions.Example\OVASOFT.NET.EntityFramework.RepositoryPattern.Examples.csproj", "{B01B9CF1-391F-AD9B-D3E7-7E32D71B1B20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVASOFT.NET.EntityFramework.Onion.Examples", "ova.Net.EntityFramework.Abstractions.Example\OVASOFT.NET.EntityFramework.Onion.Examples.csproj", "{B01B9CF1-391F-AD9B-D3E7-7E32D71B1B20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
