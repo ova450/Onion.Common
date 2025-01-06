@@ -7,7 +7,7 @@ namespace OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.D
 //    public T Parent { get; set; }
 //}
 
-public interface IParent<TId, T> where TId : struct where T : class, IEntityBase<TId>
+public interface IParent<TId, T> where TId : struct where T : class, IEntity
 //public interface IParent<TId, IEntityBase> where TId : struct // where T : class, IEntityBase<TId>
 {
     public TId ParentId { get; set; }

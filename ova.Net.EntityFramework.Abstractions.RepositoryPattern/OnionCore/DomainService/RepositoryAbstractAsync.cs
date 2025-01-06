@@ -14,7 +14,7 @@ namespace OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.D
 /// <typeparam name="T">Универсальный тип объектов в репозитории.</typeparam>
 /// <typeparam name="TId">Тип идентификатора.</typeparam>
 /// <param name="context">Контекст репозитория.</param>
-public abstract class RepositoryAbstractAsync<T, TId>(DbContext context): RepositoryAbstract<T, TId>(context), IRepositoryAsync<T, TId>
+public abstract class RepositoryAbstractAsync<TId, T>(DbContext context): RepositoryAbstract<TId, T>(context), IRepositoryAsync<TId, T>
     where T : class, IEntityBase<TId>
     where TId : struct
 {

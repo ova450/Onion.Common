@@ -5,24 +5,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
+using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainService;
 
 using ApplicationDbContext db = new ApplicationDbContext();
-
-Console.WriteLine("using ApplicationDbContext db = new ApplicationDbContext();");
 
 db.Database.EnsureCreated();
 Console.WriteLine("db.Database.EnsureCreated();");
 
-// Добавление нового объекта Foo
+// Добавление новых объекта Foo и Bar
 db.Foos.Add(new Foo() { Name = "first" });
 db.Foos.Add(new Foo() { Name = "second" });
-db.SaveChanges();
-
 db.Bars.Add(new Bar() { FooId = db.Foos.OrderBy(f => f.Id).LastOrDefault().Id, Name = "third" });
 db.Bars.Add(new Bar() { FooId = db.Foos.OrderBy(f => f.Id).LastOrDefault().Id, Name = "forth" });
 db.SaveChanges();
 
-Console.WriteLine("db.SaveChanges();");
+FooRepo fooRepo = new(db);
+BarRepo barRepo = new(db);
+
+fooRepo.Add(,);
+
 
 // и вывод
 var foo = db.Foos.FirstOrDefault(f => f.Id == 1);
@@ -41,13 +42,47 @@ bar = db.Bars.FirstOrDefault(f => f.Id == 2);
 if (bar != null) Console.WriteLine($"FooId: {bar.FooId} , Id:  {bar.Id} : {bar.Name}");
 else Console.WriteLine("bar with Id 2 not found.");
 
-public class Foo: IEntity<int>
-{
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Автоинкремент
-    public int Id { get; set; }
-    public string Name { get; set; }
 
+
+
+// и вывод
+foo = fooRepo.Get(1); // db.Foos.FirstOrDefault(f => f.Id == 1);
+if (foo != null) Console.WriteLine($"Id: {foo.Id}, Name: {foo.Name}");
+else Console.WriteLine("foo with Id 1 not found.");
+
+foo = fooRepo.Get(2);
+if (foo != null) Console.WriteLine($"Id: {foo.Id}, Name: {foo.Name}");
+else Console.WriteLine("foo with Id 2 not found.");
+
+bar = barRepo.Get(1);
+if (bar != null) Console.WriteLine($"FooId: {bar.FooId}, Id: {bar.Id}, Name: {bar.Name}");
+else Console.WriteLine("bar with Id 1 not found.");
+
+bar = barRepo.Get(2);
+if (bar != null) Console.WriteLine($"FooId: {bar.FooId} , Id:  {bar.Id} : {bar.Name}");
+else Console.WriteLine("bar with Id 2 not found.");
+
+
+/// <summary>The entity mapped to the database.</summary>
+/// <remarks>1. The IEntity interface, from which this entity inherits, is not required,
+/// but it performs two very important functions: it checks the type of identifier and
+/// separates classes mapped to the database from other classes. You may need it next time.
+/// 2. If you don't need a frequently used property Name, you can use the IEntityBase interface
+/// instead IEntity.
+/// 3. Main form of IEntity or IEntityBase interfaces is universal and consider type parameter.
+/// By default (w/o type parameter) supposed Id type is int.</remarks>
+public class Foo: IEntity                                           // by default, type not required if Id is int
+{
+    /// <summary>
+    /// Получает или задает идентификатор объекта.
+    /// </summary>
+    [Key]                                                           // Identity, not required if Id
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]           // Autoincrement, at the discretion of the developer
+    public int Id { get; set; }
+      
+    /// <summary>Gets or sets the name.</summary>
+    /// <value>The name.</value>
+    public string Name { get; set; }                        
     //public ICollection<Bar> Bars { get; set; } = new List<Bar>(); // Инициализация коллекции
 }
 
@@ -89,25 +124,20 @@ public class ApplicationDbContext: DbContext
     public DbSet<Bar> Bars { get; set; }
 }
 
-
-//public interface IParent1<TId>: IEntityBase<TId> where TId : struct{    IEntity<TId> Parent { get; set; }}
-
-//public interface IParent2<T, TId> where TId : struct where T : class, IEntityBase<TId> //: IParent1<T> 
-//{
-//    public TId NewParentId { get; set; }
-//    public IParent1<TId> NewParent { get; set; }
-//}
+public class FooRepo(DbContext context): RepositoryAbstract<Foo, int>(context) { }
+public class BarRepo(DbContext context): RepositoryAbstract<Bar, int>(context) { }
 
 
-//public class Bar: IEntity<int>, IParent2<Foo, int>
-//{
-//    public string Name { get; set; }
-//    public int Id { get; set; }
+class Foo2 : IEntity { }
+class Bar2 : IEntity <long> { long IEntity<long>.Id { get; set; } } 
+class FooBar2
+{
+    Foo2 foo2;
+    Bar2 bar2;
 
-//    int IParent2<Foo, int>.NewParentId { get; set; }
-//    IParent1<int> IParent2<Foo, int>.NewParent { get; set; }
-
-//    public int NewParentId { get=>Newp; set; }
-//    public IParent1<int> IParent2<Foo, int>.NewParent { get; set; }
-
-//}
+    void autoconvers()
+    {
+        bar2 = foo2;
+    }  
+}
+  

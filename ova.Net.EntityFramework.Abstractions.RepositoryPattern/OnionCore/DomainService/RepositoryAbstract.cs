@@ -12,7 +12,7 @@ namespace OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.D
 /// </summary>
 /// <typeparam name="T">The universal type of the object</typeparam>
 /// <typeparam name="TId">The type of the identifier.</typeparam>
-public abstract class RepositoryAbstract<T, TId>(DbContext context): IRepository<T, TId>
+public abstract class RepositoryAbstract<TId, T>(DbContext context): IRepository<TId, T>
     where T : class, IEntityBase<TId>
     where TId : struct
 {
