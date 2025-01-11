@@ -1,7 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-
-using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
+using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
 
 namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
@@ -13,7 +12,7 @@ namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 /// <typeparam name="T">The universal type of the object</typeparam>
 /// <typeparam name="TId">The type of the identifier.</typeparam>
 public abstract class RepositoryAbstract<TId, T>(DbContext context): IRepository<TId, T>
-    where T : class, IEntityBase<TId>
+    where T : class, IEntity<TId>
     where TId : struct
 {
     /// <summary>

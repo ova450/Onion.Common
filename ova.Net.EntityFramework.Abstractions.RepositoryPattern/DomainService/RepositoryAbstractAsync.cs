@@ -1,7 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-
-using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
+using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
 
 namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
@@ -15,7 +14,7 @@ namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 /// <typeparam name="TId">Тип идентификатора.</typeparam>
 /// <param name="context">Контекст репозитория.</param>
 public abstract class RepositoryAbstractAsync<TId, T>(DbContext context): RepositoryAbstract<TId, T>(context), IRepositoryAsync<TId, T>
-    where T : class, IEntityBase<TId>
+    where T : class, IEntity<TId>
     where TId : struct
 {
     protected DbContext _context = context;

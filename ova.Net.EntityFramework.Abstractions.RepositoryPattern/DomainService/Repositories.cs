@@ -1,11 +1,12 @@
-﻿using OVASOFT.NET.EntityFramework.RepositoryPattern.Abstractions.OnionCore.DomainModel;
+﻿
+using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
 
 namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
 
 /// <summary>Универсальный интерфейс репозитория, предоставляющего базовые методы основных операции CRUD.</summary>
 /// <typeparam name="T">Универсальный тип объектов репозитория.</typeparam>
 /// <typeparam name="TId">Тип идентификатора.</typeparam>
-public interface IRepository<TId, T> where T : class, IEntityBase<TId> where TId : struct
+public interface IRepository<TId, T> where T : class, IEntity<TId> where TId : struct
 {
     /// <summary>Получает IQueryable&lt;T&gt; коллекцию всех объектов из репозитория.</summary>
     /// <returns>IQueryable&lt;T&gt; коллекция объектов.</returns>
@@ -39,7 +40,7 @@ public interface IRepository<TId, T> where T : class, IEntityBase<TId> where TId
 /// <summary>Универсальный интерфейс репозитория, предоставляющего асинхронные базовые методы основных операции CRUD.</summary>
 /// <typeparam name="T">Универсальный тип объектов репозитория.</typeparam>
 /// <typeparam name="TId">Тип идентификатора объекта.</typeparam>
-public interface IRepositoryAsync<TId, T>: IRepository<TId, T> where T : class, IEntityBase<TId> where TId : struct
+public interface IRepositoryAsync<TId, T>: IRepository<TId, T> where T : class, IEntity<TId> where TId : struct
 {
     /// <summary>Асинхронно получает объект по идентификатору.</summary>
     /// <param name="id">Идентификатор объекта</param>
