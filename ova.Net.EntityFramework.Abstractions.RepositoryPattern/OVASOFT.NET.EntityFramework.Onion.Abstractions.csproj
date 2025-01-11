@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>9.1.25</Version>
+    <Version>9.2.26</Version>
     <Authors>ovaataaridotru</Authors>
     <Title>ova.Net.EntityFramework.Abstractions.RepositoryPattern</Title>
     <Copyright>$(Authors)</Copyright>
@@ -22,13 +22,10 @@ This is open-source project.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DomainModel\Abstracts\**" />
     <Compile Remove="DomainModel\TestClasses\**" />
     <Compile Remove="DomainModel\TestLocalization\**" />
-    <EmbeddedResource Remove="DomainModel\Abstracts\**" />
     <EmbeddedResource Remove="DomainModel\TestClasses\**" />
     <EmbeddedResource Remove="DomainModel\TestLocalization\**" />
-    <None Remove="DomainModel\Abstracts\**" />
     <None Remove="DomainModel\TestClasses\**" />
     <None Remove="DomainModel\TestLocalization\**" />
   </ItemGroup>

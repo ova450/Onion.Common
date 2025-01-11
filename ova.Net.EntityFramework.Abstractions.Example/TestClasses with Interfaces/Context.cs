@@ -7,7 +7,7 @@ namespace OVASOFT.NET.EF.Onion.Examples.TestClasses.WithInterfaces;
 public class ApplicationDbContext: DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Initial Catalog=dbCobra.9.1.25.2; Integrated Security=True");
+        => optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Initial Catalog=dbCobra.9.2.26.1; Integrated Security=True");
 
     public DbSet<Foo> Foos { get; set; }
     public DbSet<Bar> Bars { get; set; }

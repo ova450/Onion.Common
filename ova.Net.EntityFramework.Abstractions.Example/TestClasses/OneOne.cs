@@ -1,13 +1,12 @@
 ﻿
 using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+using OVASOFT.NET.EF.Onion.Abstractions.DomainModel.Abstracts;
 
 namespace OVASOFT.NET.EF.Onion.Examples.TestClasses;
 
 
-public partial class OneOne: IEntity<Guid>, IParent<Guid, Bar>
+public partial class OneOne: AEntity<Guid>, IParent<Guid, Bar>
 {
-    public Guid Id { get; set; }
-
     public Bar Bars
     {
         get => ((IParent<Guid, Bar>) this).Parent;
