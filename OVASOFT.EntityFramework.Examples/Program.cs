@@ -1,14 +1,17 @@
 ﻿
-using OVASOFT.NET.EF.Onion.Examples.TestClasses;
+using Microsoft.EntityFrameworkCore;
+
+using OVASOFT.EF.Examples.TestClasses;
 
 using ApplicationDbContext db = new ();
 
-db.Database.EnsureCreated();
-Console.WriteLine("db.Database.EnsureCreated();");
+string dbName = db.Database.GetDbConnection().Database.ToString();
+
+Console.WriteLine(db.Database.EnsureCreated() ? $"Database {dbName} created." : $"Database {dbName} exist.");
 
 //// Добавление новых объекта Foo и Bar
 //db.Foos.Add(new Foo() { Name = "first" });
-//db.Foos.Add(new Foo() { Name = "second" });
+//db.Foos.Add(new Foo =  { Name = "second" });
 //db.Bars.Add(new Bar() { FooId = db.Foos.OrderBy(f => f.Id).LastOrDefault().Id, Name = "third" });
 //db.Bars.Add(new Bar() { FooId = db.Foos.OrderBy(f => f.Id).LastOrDefault().Id, Name = "forth" });
 //db.SaveChanges();
@@ -73,7 +76,7 @@ Console.WriteLine("db.Database.EnsureCreated();");
 //    [Key]                                                           // Identity, not required if Id
 //    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]           // Autoincrement, at the discretion of the developer
 //    public int Id { get; set; }
-      
+
 //    /// <summary>Gets or sets the name.</summary>
 //    /// <value>The name.</value>
 //    public string Name { get; set; }                        
@@ -134,4 +137,3 @@ Console.WriteLine("db.Database.EnsureCreated();");
 //        bar2 = foo2;
 //    }  
 //}
-  

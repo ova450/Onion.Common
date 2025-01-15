@@ -1,10 +1,11 @@
 ﻿
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel.Abstracts;
+using Ovasoft.Cofitools.Domain.Model.Abstracts;
+using Ovasoft.Cofitools.Domain.Model;
 
-namespace OVASOFT.NET.EF.Onion.Examples.TestClasses;
 
-public partial class Bar: AEntityRoot<Guid,ManyMany>, IParent<Guid, OneOne>, ICreatedBy<User>//, IModifiedBy<int,User>
+namespace OVASOFT.EF.Examples.TestClasses;
+
+public partial class Bar: AEntityRoot<Guid, ManyMany>, IParent<Guid, OneOne>, ICreatedBy<User>//, IModifiedBy<int,User>
 {
     public DateTime CreationDate { get; set; }
     public int CreatedByUserId { get; set; }

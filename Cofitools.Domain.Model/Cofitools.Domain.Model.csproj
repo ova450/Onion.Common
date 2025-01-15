@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  
+    <TargetFramework>net9.0-windows8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <Authors>ovaataaridotru</Authors>
+    <Copyright>$(Authors)</Copyright>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackAsTool>False</PackAsTool>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+	<Title>&gt;OVASOFT Cofitools DomainModel</Title>
+	<Product>OCDM</Product>
+    <Version>9.4.30</Version>
+	<RootNamespace>Ovasoft.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <PackageReleaseNotes>RC; Free</PackageReleaseNotes>
+	<PackageProjectUrl>https://github.com/ova450/Onion.Common</PackageProjectUrl>
+	 
+	<RepositoryUrl>https://github.com/ova450/Onion.Common</RepositoryUrl>
+    <PackageTags>Net 9.0; Entity Framework; Onion Core; Domain Model; Entity; Code First</PackageTags>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    
+	<SignAssembly>False</SignAssembly>
+    <AssemblyName>Ovasoft.$(MSBuildProjectName)</AssemblyName>  
+    <PackageId>$(AssemblyName)</PackageId>
+    
+	<Description>The package implements the Entity Framework Code First pattern at the level of database entity relationship abstraction and includes interfaces for domain models. 
+These abstract concepts are designed to be used within the context of an application built using the Onion architecture and the Entity Framework, but they can also be applied to other architectures and frameworks.</Description>
+    
+	<PackageOutputPath>..\Cofitools.Packages\</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsAotCompatible>False</IsAotCompatible>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <IsTrimmable>False</IsTrimmable>
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsAotCompatible>False</IsAotCompatible>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <IsTrimmable>True</IsTrimmable>
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,5 +1,7 @@
 ﻿
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+//using Ovasoft. OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+
+using Ovasoft.Cofitools.Domain.Model;
 
 namespace OVASOFT.NET.EF.Onion.Examples.TestClasses.WithInterfaces;
 

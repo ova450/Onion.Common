@@ -1,5 +1,5 @@
 ﻿
-namespace OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+namespace Ovasoft.Cofitools.Domain.Model;
 
 /// <summary>The interface implements the navigation property of the child entity.</summary>
 /// <typeparam name="TParentId">The type of the parent identifier.</typeparam>

@@ -1,5 +1,5 @@
 ﻿
-namespace OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+namespace Ovasoft.Cofitools.Domain.Model;
 
 /// <summary>Base interface for database-mapped classes.</summary>
 /// <remarks>

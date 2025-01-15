@@ -1,8 +1,8 @@
 ﻿
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel.Abstracts;
+using Ovasoft.Cofitools.Domain.Model.Abstracts;
+using Ovasoft.Cofitools.Domain.Model;
 
-namespace OVASOFT.NET.EF.Onion.Examples.TestClasses;
+namespace OVASOFT.EF.Examples.TestClasses;
 
 
 public partial class OneOne: AEntity<Guid>, IParent<Guid, Bar>

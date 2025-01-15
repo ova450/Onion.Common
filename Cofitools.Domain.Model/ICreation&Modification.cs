@@ -1,4 +1,7 @@
-﻿using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+﻿
+using System;
+
+namespace Ovasoft.Cofitools.Domain.Model;
 
 public interface ICreatedBy<TUserId, TUser>
   where TUserId : struct
@@ -9,7 +12,7 @@ public interface ICreatedBy<TUserId, TUser>
     TUser CreatedByUser { get; set; }
 }
 
-public interface ICreatedBy<TUser>: ICreatedBy<int,TUser>  where TUser : class, IEntityBase { }
+public interface ICreatedBy<TUser>: ICreatedBy<int, TUser> where TUser : class, IEntityBase { }
 
 public interface IModifiedBy<TUserId, TUser>
     where TUserId : struct
@@ -20,5 +23,5 @@ public interface IModifiedBy<TUserId, TUser>
     TUser ModifiedByUser { get; set; }
 }
 
-public interface IModifiedBy<TUser> : IModifiedBy<int,TUser>  where TUser : class, IEntityBase { }
+public interface IModifiedBy<TUser>: IModifiedBy<int, TUser> where TUser : class, IEntityBase { }
 
