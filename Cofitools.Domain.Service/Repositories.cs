@@ -1,7 +1,10 @@
 ﻿
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
+using Ovasoft.Cofitools.Domain.Model;
+
+namespace Ovasoft.Cofitools.Domain.Service;
 
 /// <summary>Универсальный интерфейс репозитория, предоставляющего базовые методы основных операции CRUD.</summary>
 /// <typeparam name="T">Универсальный тип объектов репозитория.</typeparam>

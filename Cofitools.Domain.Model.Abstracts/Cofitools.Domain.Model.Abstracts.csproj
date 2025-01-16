@@ -15,15 +15,15 @@
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		
-		<Title>&gt;OVASOFT Cofitools DomainModel Abstracts</Title>
+		<Title>OVASOFT Cofitools DomainModel Abstracts</Title>
 		<Product>OCDMA</Product>
-		<Version>9.4.30</Version>
+		<Version>9.4.31</Version>
 		<RootNamespace>Ovasoft.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
 		<PackageReleaseNotes>RC</PackageReleaseNotes>
 		<PackageProjectUrl>https://github.com/ova450/Onion.Common</PackageProjectUrl>
 		
 		<RepositoryUrl>https://github.com/ova450/Onion.Common</RepositoryUrl>
-		<PackageTags>Net 9.0; Entity Framework; Onion; Domain Model; Domain Service; Entity; Code First</PackageTags>
+		<PackageTags>Net 9.0; Entity Framework; Onion; Domain Model; Entity; Code First</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		
 		<SignAssembly>False</SignAssembly>
@@ -59,7 +59,7 @@ The abstract concepts provided by the OCDMA software can be utilized in applicat
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ovasoft.Cofitools.Domain.Model" Version="9.4.30" />
+    <PackageReference Include="Ovasoft.Cofitools.Domain.Model" Version="9.4.31" />
   </ItemGroup>
 
 </Project>

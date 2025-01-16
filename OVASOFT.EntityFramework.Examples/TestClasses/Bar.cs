@@ -1,6 +1,7 @@
 ﻿
 using Ovasoft.Cofitools.Domain.Model.Abstracts;
 using Ovasoft.Cofitools.Domain.Model;
+using Cofitools.Examples.TestClasses;
 
 
 namespace OVASOFT.EF.Examples.TestClasses;

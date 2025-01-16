@@ -1,4 +1,6 @@
 ﻿
+using Cofitools.Examples.TestClasses;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace OVASOFT.EF.Examples.TestClasses;

@@ -1,8 +1,10 @@
 ﻿
+using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+using Ovasoft.Cofitools.Domain.Model;
 
-namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
+namespace Ovasoft.Cofitools.Domain.Service.Abstracts;
 
 /// <summary>
 /// An abstract repository class that implements the IRepository universal interface. 

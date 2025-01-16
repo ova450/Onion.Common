@@ -17,7 +17,7 @@
 
 	<Title>&gt;OVASOFT Cofitools DomainModel</Title>
 	<Product>OCDM</Product>
-    <Version>9.4.30</Version>
+    <Version>9.4.31</Version>
 	<RootNamespace>Ovasoft.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <PackageReleaseNotes>RC; Free</PackageReleaseNotes>
 	<PackageProjectUrl>https://github.com/ova450/Onion.Common</PackageProjectUrl>

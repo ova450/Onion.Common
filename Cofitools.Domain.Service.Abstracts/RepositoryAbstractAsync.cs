@@ -1,8 +1,10 @@
 ﻿
+using System;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using OVASOFT.NET.EF.Onion.Abstractions.DomainModel;
+using Ovasoft.Cofitools.Domain.Model;
 
-namespace OVASOFT.NET.EF.Onion.Abstractions.DomainService;
+namespace Ovasoft.Cofitools.Domain.Service.Abstracts;
 
 /// <summary>
 /// Универсальный абстрактный класс репозитория, реализующий асинхронные основные операции CRUD

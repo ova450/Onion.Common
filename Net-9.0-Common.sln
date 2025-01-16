@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cofitools.Domain.Model", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cofitools.Domain.Model.Abstracts", "Cofitools.Domain.Model.Abstracts\Cofitools.Domain.Model.Abstracts.csproj", "{89384DC8-3F6E-BE74-B70F-38160CE6FA52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cofitools.Domain.Service", "Cofitools.Domain.Service\Cofitools.Domain.Service.csproj", "{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cofitools.Examples", "OVASOFT.EntityFramework.Examples\Cofitools.Examples.csproj", "{2D7D6462-9032-D7D8-08F9-048056D9CFEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cofitools.Domain.Service", "Cofitools.Domain.Service\Cofitools.Domain.Service.csproj", "{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{89384DC8-3F6E-BE74-B70F-38160CE6FA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89384DC8-3F6E-BE74-B70F-38160CE6FA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89384DC8-3F6E-BE74-B70F-38160CE6FA52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D7D6462-9032-D7D8-08F9-048056D9CFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D7D6462-9032-D7D8-08F9-048056D9CFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7D6462-9032-D7D8-08F9-048056D9CFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7D6462-9032-D7D8-08F9-048056D9CFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7CE6BE-428C-3568-ABDF-E031F05B98B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
