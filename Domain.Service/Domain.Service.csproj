@@ -1,0 +1,68 @@
+﻿ <Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<TargetFramework>net9.0-windows8.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Nullable>enable</Nullable>
+		<Authors>ovaataaridotru</Authors>
+		<Copyright>$(Authors)</Copyright>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackAsTool>False</PackAsTool>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<Title>BaikalNetHub CodeFirst DomainService</Title>
+		<Product>BNHCFDS</Product>
+		<Version>9.6.37</Version>
+		<RootNamespace>BaikalNetHub.CodeFirst.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+		<PackageReleaseNotes>RC</PackageReleaseNotes>
+		<PackageProjectUrl>https://github.com/ova450/Onion.Common</PackageProjectUrl>
+
+		<RepositoryUrl>https://github.com/ova450/Onion.Common</RepositoryUrl>
+		<PackageTags>Net 9.0; Entity Framework; Onion; Domain Model; Entity; Code First</PackageTags>
+
+		<SignAssembly>False</SignAssembly>
+		<AssemblyName>BaikalNetHub.CodeFirst.$(MSBuildProjectName)</AssemblyName>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Description>
+			The package offers fundamental interfaces that implement synchronous and asynchronous Create, Read, Update, Delete (CRUD) operations,
+			following the Repository pattern.
+		</Description>
+
+		<PackageOutputPath>..\Packages\</PackageOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<IsAotCompatible>False</IsAotCompatible>
+		<CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+		<IsTrimmable>False</IsTrimmable>
+		<IsPublishable>False</IsPublishable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<IsAotCompatible>False</IsAotCompatible>
+		<CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+		<IsTrimmable>True</IsTrimmable>
+		<IsPublishable>True</IsPublishable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Domain.Service.csproj.Backup.tmp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BaikalNetHub.CodeFirst.Domain.Model" Version="9.6.37" />
+	</ItemGroup>
+
+</Project>
